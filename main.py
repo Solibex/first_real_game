@@ -4,7 +4,7 @@ from pygame.math import Vector2
 
 pygame.init()
 
-
+# Classes
 class main:
     def loop():
         for event in pygame.event.get():
@@ -20,18 +20,11 @@ class images:
 class data:
     caption = 'smile yez'
     canvas = (500, 500)
-
+# Screen stuff
 screen = pygame.display.set_mode(data.canvas)
-surface = pygame.Surface
 pygame.display.set_caption(data.caption)
 pygame.display.set_icon(images.icon)
 screen.fill((255, 255, 255))
-
-class Player:
-    position = pygame.Vector2()
-    position.xy = (0, 0)
-
-
-
+# Main loop
 while True:
     main.loop()
