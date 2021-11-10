@@ -1,4 +1,6 @@
 import pygame
+from pygame.locals import *
+from pygame.math import Vector2
 
 pygame.init()
 
@@ -20,9 +22,15 @@ class data:
     canvas = (500, 500)
 
 screen = pygame.display.set_mode(data.canvas)
+surface = pygame.Surface
 pygame.display.set_caption(data.caption)
 pygame.display.set_icon(images.icon)
 screen.fill((255, 255, 255))
+
+class Player:
+    position = pygame.Vector2()
+    position.xy = (0, 0)
+
 
 
 while True:
